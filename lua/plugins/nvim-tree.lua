@@ -1,5 +1,6 @@
 local M = {
 	"nvim-tree/nvim-tree.lua",
+	cmd = "NvimTreeToggle",
 }
 
 function M.config()
@@ -10,7 +11,7 @@ function M.config()
 
 	nvim_tree.setup {
 		view = {
-			width = 30,
+			width = 28,
 			side = "left",
 			hide_root_folder = true,
 		},
