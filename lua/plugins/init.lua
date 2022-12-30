@@ -1,5 +1,8 @@
 return {
-	{"tpope/vim-fugitive"}, 
+	{
+		"tpope/vim-fugitive",
+		event = "VeryLazy"
+	}, 
 	{
 		"norcalli/nvim-colorizer.lua",
 		config = true

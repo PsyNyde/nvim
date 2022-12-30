@@ -1,5 +1,5 @@
 local M = {
-	"nvim-tree/nvim-tree.lua"
+	"nvim-tree/nvim-tree.lua",
 }
 
 function M.config()

@@ -66,11 +66,10 @@ function M.config()
 		dashboard.button("e", " " .. " New file", ":ene <BAR> startinsert <CR>"),
 		dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
 		dashboard.button("t", " " .. " Find text", ":Telescope live_grep <CR>"),
-		dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
 		dashboard.button("q", " " .. " Quit", ":qa<CR>"),
 	}
 	local function footer()
-		return "wahid@orbit"
+		return "~wahid@orbit~"
 	end
 
 	dashboard.section.footer.val = footer()
