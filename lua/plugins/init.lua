@@ -5,11 +5,13 @@ return {
 	}, 
 	{
 		"norcalli/nvim-colorizer.lua",
-		config = true
+		config = true,
+		event = "BufReadPre"
 	}, 
 	{
 		"windwp/nvim-autopairs",
-		config = true
+		config = true,
+		event = "BufReadPre"
 	}, 
 	{"nvim-tree/nvim-web-devicons"}, 
 	{
