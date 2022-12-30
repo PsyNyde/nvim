@@ -7,7 +7,12 @@ return {
 		"norcalli/nvim-colorizer.lua",
 		config = true,
 		event = "BufReadPre"
-	}, 
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		event = "BufReadPre",
+		config = true,
+	},
 	{
 		"windwp/nvim-autopairs",
 		config = true,
