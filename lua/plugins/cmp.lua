@@ -101,11 +101,11 @@ function M.config()
 			{ name = "path" },
 			{ name = "emoji" },
 		}),
-		experimental = {
-			ghost_text = {
-				hl_group = "LspCodeLens",
-			},
-		},
+		-- experimental = {
+		-- 	ghost_text = {
+		-- 		hl_group = "LspCodeLens",
+		-- 	},
+		-- },
 	})
 
 	cmp.setup.cmdline('/', {
