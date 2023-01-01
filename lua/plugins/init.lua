@@ -18,7 +18,7 @@ return {
 		config = true,
 		event = "BufReadPre"
 	}, 
-	{"nvim-tree/nvim-web-devicons"}, 
+	{"nvim-tree/nvim-web-devicons"},
 	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
