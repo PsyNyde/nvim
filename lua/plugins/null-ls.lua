@@ -21,13 +21,13 @@ local M = {
 				formatting.fish_indent,
 				diagnostics.fish,
 				diagnostics.trail_space,
-				diagnostics.cspell.with({
-					diagnostics_postprocess = function(diagnostic)
-						diagnostic.severity = vim.diagnostic.severity["WARN"]
-					end,
-				}),
+				-- diagnostics.cspell.with({
+				-- 	diagnostics_postprocess = function(diagnostic)
+				-- 		diagnostic.severity = vim.diagnostic.severity["WARN"]
+				-- 	end,
+				-- }),
 				code_actions.gitsigns,
-				code_actions.cspell,
+				-- code_actions.cspell,
 			},
 		}
 	end,
