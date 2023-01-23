@@ -14,22 +14,23 @@ vim.opt.runtimepath:prepend(lazypath)
 -- load lazy
 require("lazy").setup("plugins", {
 	install = { colorscheme = { "tokyonight" } },
-	defaults = { lazy = true, version = "*", },
+	defaults = { lazy = true, version = "*" },
+	ui = { wrap = "true" },
 	checker = { enabled = true },
 	debug = false,
-    performance = {
-        rtp = {
-          -- disable some rtp plugins
-          disabled_plugins = {
-            "gzip",
-            "matchit",
-            "matchparen",
-            "netrwPlugin",
-            "tarPlugin",
-            "tohtml",
-            "tutor",
-            "zipPlugin",
-          },
-        },
-    },
+	performance = {
+		rtp = {
+			-- disable some rtp plugins
+			disabled_plugins = {
+				"gzip",
+				"matchit",
+				"matchparen",
+				"netrwPlugin",
+				"tarPlugin",
+				"tohtml",
+				"tutor",
+				"zipPlugin",
+			},
+		},
+	},
 })

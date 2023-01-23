@@ -7,7 +7,7 @@ M.capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
 
 M.setup = function()
     vim.diagnostic.config({
-        virtual_text = false,
+        -- virtual_text = false,
         float = {
             focusable = false,
             style = "minimal",
@@ -15,13 +15,14 @@ M.setup = function()
             source = "always",
             header = "",
             prefix = "",
+            severity_sort = true,
         },
+        virtual_text = { spacing = 4, prefix = "" },
         signs = true,
         underline = true,
         update_in_insert = true,
         severity_sort = false,
     })
-
     ---- sign column
     local signs = require("utils").lsp_signs
 

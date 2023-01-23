@@ -1,6 +1,6 @@
 local M = {
 	"lukas-reineke/indent-blankline.nvim",
-	event = "BufReadPre",
+	event = "BufReadPost",
 	opts = {
 		space_char_blankline = " ",
 		show_current_context = true,

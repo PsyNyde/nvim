@@ -17,6 +17,7 @@ local M = {
         { "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", { desc = "Find word" } },
         { "<C-f>", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>" },
     },
+    cmd = { "Telescope", "Tel" },
     opts = function()
         local actions = require("telescope.actions")
         local theme = require("telescope.themes")

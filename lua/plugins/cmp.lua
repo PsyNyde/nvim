@@ -7,12 +7,6 @@ local M = {
 		"hrsh7th/cmp-cmdline",
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
-		{
-			"zbirenbaum/copilot-cmp",
-			config = function()
-				require("copilot_cmp").setup()
-			end,
-		},
 	},
 	opts = function()
 		local cmp = require("cmp")
