@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.opt.clipboard = "unnamedplus"
+-- vim.opt.clipboard = "unnamedplus"
 vim.opt.undofile = true
 vim.opt.pumheight = 10 -- pop up menu height
 vim.opt.swapfile = false

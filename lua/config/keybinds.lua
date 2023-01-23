@@ -1,20 +1,17 @@
 local utils = require("utils")
 
 -- Remap command key
-vim.keymap.set("n", "<leader><leader>", ":")
+vim.keymap.set("n", "<leader><leader>", ":", { desc = "Command mode" })
 -- Essential
-vim.keymap.set({ "n", "v" }, "<leader>qq", "<cmd>quitall<cr>", { desc = "Quit"})
+vim.keymap.set({ "n", "v" }, "<leader>qq", "<cmd>quitall<cr>", { desc = "Quit" })
 vim.keymap.set({ "n", "i", "v" }, "<C-w>", "<cmd>bd<cr>", { desc = "Quit buffer" })
 vim.keymap.set({ "i", "v", "n" }, "<C-M-w>", "<cmd>bd!<cr><esc>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Open lazy" })
 vim.keymap.set("n", "<leader>uu", "<cmd>Lazy sync<cr>", { desc = "Sync plugins" })
 
--- Plugins
-vim.keymap.set("n", "<leader>ct", "<cmd>ColorizerToggle<cr>", { desc = "Toggle colorizer" })
-
 -- Normal Map
 vim.keymap.set("n", "<TAB>", "<cmd>bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n","<S-TAB>", ":bprev<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<S-TAB>", ":bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "hs", ":split<CR>", { desc = "Horizonal split" })
 vim.keymap.set("n", "vs", ":vs<CR>", { desc = "Vertical split" })
 vim.keymap.set("n", "<C-a>", "ggVG<CR>", { desc = "Select all" })
@@ -32,20 +29,20 @@ vim.keymap.set("n", "<leader>v", ":vs +terminal | startinsert<CR>", { desc = "Ve
 vim.keymap.set("n", "<leader>h", ":split +terminal | startinsert<CR>", { desc = "Horizontal terminal" })
 
 -- save file
-vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", {desc = "Save file" })
+vim.keymap.set({ "i", "v", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save file" })
 
 -- Insert Map
 vim.keymap.set("i", "<C-E>", "<End>", { desc = "End of line" })
 vim.keymap.set("i", "<C-A>", "<Home>", { desc = "Beginning of line" })
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({ "n","v" }, "<leader>y", "\"+y", { desc = "Copy to clipboard" })
-vim.keymap.set({ "n","v" }, "<leader>Y", "\"+Y")
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y')
 
-vim.keymap.set({ "n","v" }, "<leader>d", "\"_d", { desc = "Delete to void" })
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete to void" })
 
 -- Replace Map
-vim.keymap.set("n", "<leader>s",":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", {desc ="Replace word"})
+vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace word" })
 
 -- Clear search results
 vim.keymap.set("n", "<esc>", "<cmd>noh<CR>")

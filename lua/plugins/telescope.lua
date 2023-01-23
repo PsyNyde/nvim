@@ -8,13 +8,13 @@ local M = {
     },
     keys = {
 
-        { "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>" },
+        { "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", { desc = "Find files" } },
         { "<C-p>", "<cmd>lua require('telescope.builtin').commands()<cr>" },
         {
             "<C-M-p>",
             "<cmd>lua require('telescope.builtin').builtin(require('telescope.themes').get_dropdown({}))<cr>",
         },
-        { "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>" },
+        { "<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", { desc = "Find word" } },
         { "<C-f>", "<cmd>lua require('telescope.builtin').current_buffer_fuzzy_find()<cr>" },
     },
     opts = function()

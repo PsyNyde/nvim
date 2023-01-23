@@ -27,7 +27,7 @@ local M = {
 				-- 	end,
 				-- }),
 				code_actions.gitsigns,
-				-- code_actions.cspell,
+			--[[ 	code_actions.cspell, ]]
 			},
 		}
 	end,
