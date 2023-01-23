@@ -37,7 +37,7 @@ vim.keymap.set("i", "<C-A>", "<Home>", { desc = "Beginning of line" })
 
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to clipboard" })
-vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y')
+vim.keymap.set({ "n", "v" }, "<leader>Y", '"+Y', { desc = "Copy line to clipboard" })
 
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete to void" })
 

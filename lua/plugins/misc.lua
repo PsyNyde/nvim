@@ -4,7 +4,7 @@ return {
 	{ "max397574/better-escape.nvim", config = true, event = "BufReadPre" },
 	{
 		"folke/which-key.nvim",
-        event = "BufReadPost",
+		event = "BufReadPost",
 		config = function()
 			vim.o.timeout = true
 			vim.o.timeoutlen = 400

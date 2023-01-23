@@ -1,5 +1,5 @@
 local M = {
-	'RRethy/nvim-base16',
+	"RRethy/nvim-base16",
 	lazy = false,
 	priority = 1000,
 }
@@ -28,10 +28,14 @@ function M.config()
 	if present then
 		base16.setup(_G.color)
 	end
-	-- Highlights 
+	-- Highlights
 	local function hl(highlight, fg, bg)
-		if fg == nil then fg = "none" end
-		if bg == nil then bg = "none" end
+		if fg == nil then
+			fg = "none"
+		end
+		if bg == nil then
+			bg = "none"
+		end
 		vim.cmd("hi " .. highlight .. " guifg=" .. fg .. " guibg=" .. bg)
 	end
 
@@ -48,12 +52,12 @@ function M.config()
 
 	-- Nvim Tree
 	hl("NvimTreeFolderName", _G.color.base05)
-	hl("NvimTreeOpenedFolderName",_G.color.base05)
+	hl("NvimTreeOpenedFolderName", _G.color.base05)
 	hl("NvimTreeEmptyFolderName", _G.color.base05)
-	hl("NvimTreeFolderIcon",_G.color.base03)
+	hl("NvimTreeFolderIcon", _G.color.base03)
 	hl("NvimTreeGitDirty", _G.color.base08)
 	hl("NvimTreeGitNew", _G.color.base0B)
-	hl("NvimTreeGitDeleted",_G.color.base08)
+	hl("NvimTreeGitDeleted", _G.color.base08)
 	hl("NvimTreeGitRenamed", _G.color.base0A)
 	hl("NvimTreeGitExecFile", _G.color.base0B)
 	hl("NvimTreeSpecialFile", _G.color.base0E)
@@ -66,7 +70,6 @@ function M.config()
 	hl("TelescopePromptNormal", nil, _G.color.base01)
 	hl("TelescopePromptPrefix", _G.color.base08, _G.color.base01)
 	hl("TelescopeSelection", nil, _G.color.base01)
-
 
 	-- Menu
 	hl("Pmenu", nil, _G.color.base01)

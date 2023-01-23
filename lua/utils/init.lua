@@ -37,7 +37,7 @@ M.cmp_kinds = {
 }
 
 M.mason_packages = {
-    "astro-language-server",
+	"astro-language-server",
 	"bash-language-server",
 	"css-lsp",
 	"eslint-lsp",
