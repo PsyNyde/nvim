@@ -11,6 +11,4 @@ return {
 			require("which-key").setup()
 		end,
 	},
-	--{ "MunifTanjim/nui.nvim" }, --
-	-- { "nvim-tree/nvim-web-devicons", opts = { default = true } },
 }
