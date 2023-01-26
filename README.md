@@ -27,9 +27,6 @@
 <img src="preview/9.png" alt="blazingly fast 🏎️" align="center">
 <hr>
 
-<img src="preview/10.png" alt="blazingly fast 🏎️" align="center">
-<hr>
-
 <br>
-<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
