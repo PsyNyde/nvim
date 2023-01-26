@@ -95,87 +95,87 @@ function M.config()
 				fg = _G.color.base00,
 				bg = _G.color.base00,
 			},
-             diagnostic = {
-                bg = _G.color.base00,
-            },
-            diagnostic_visible = {
-                bg = _G.color.base00,
-            },
-            diagnostic_selected = {
-                bg =_G.color.base00,
-            },
-            hint = {
-                bg = _G.color.base00
-            },
-            hint_visible = {
-                bg =_G.color.base00,
-            },
-            hint_selected = {
-                bg =_G.color.base00,
-            },
-            hint_diagnostic = {
-                bg =_G.color.base00,
-            },
-            hint_diagnostic_visible = {
-                bg =_G.color.base00,
-            },
-            hint_diagnostic_selected = {
-                bg =_G.color.base00,
-            },
-            info = {
-                bg =_G.color.base00,
-            },
-            info_visible = {
-                bg = _G.color.base00,
-            },
-            info_selected = {
-                bg =_G.color.base00,
-            },
-            info_diagnostic = {
-                bg =_G.color.base00,
-            },
-            info_diagnostic_visible = {
-                bg =_G.color.base00,
-            },
-            info_diagnostic_selected = {
-                bg =_G.color.base00,
-            },
-            warning = {
-                bg =_G.color.base00,
-            },
-            warning_visible = {
-                bg =_G.color.base00,
-            },
-            warning_selected = {
-                bg =_G.color.base00,
-            },
-            warning_diagnostic = {
-                bg =_G.color.base00,
-            },
-            warning_diagnostic_visible = {
-                bg =_G.color.base00,
-            },
-            warning_diagnostic_selected = {
-                bg =_G.color.base00,
-            },
-            error = {
-                bg =_G.color.base00,
-            },
-            error_visible = {
-                bg =_G.color.base00,
-            },
-            error_selected = {
-                bg =_G.color.base00,
-            },
-            error_diagnostic = {
-                bg =_G.color.base00,
-            },
-            error_diagnostic_visible = {
-                bg =_G.color.base00,
-            },
-            error_diagnostic_selected = {
-                bg =_G.color.base00,
-            },
+			diagnostic = {
+				bg = _G.color.base00,
+			},
+			diagnostic_visible = {
+				bg = _G.color.base00,
+			},
+			diagnostic_selected = {
+				bg = _G.color.base00,
+			},
+			hint = {
+				bg = _G.color.base00,
+			},
+			hint_visible = {
+				bg = _G.color.base00,
+			},
+			hint_selected = {
+				bg = _G.color.base00,
+			},
+			hint_diagnostic = {
+				bg = _G.color.base00,
+			},
+			hint_diagnostic_visible = {
+				bg = _G.color.base00,
+			},
+			hint_diagnostic_selected = {
+				bg = _G.color.base00,
+			},
+			info = {
+				bg = _G.color.base00,
+			},
+			info_visible = {
+				bg = _G.color.base00,
+			},
+			info_selected = {
+				bg = _G.color.base00,
+			},
+			info_diagnostic = {
+				bg = _G.color.base00,
+			},
+			info_diagnostic_visible = {
+				bg = _G.color.base00,
+			},
+			info_diagnostic_selected = {
+				bg = _G.color.base00,
+			},
+			warning = {
+				bg = _G.color.base00,
+			},
+			warning_visible = {
+				bg = _G.color.base00,
+			},
+			warning_selected = {
+				bg = _G.color.base00,
+			},
+			warning_diagnostic = {
+				bg = _G.color.base00,
+			},
+			warning_diagnostic_visible = {
+				bg = _G.color.base00,
+			},
+			warning_diagnostic_selected = {
+				bg = _G.color.base00,
+			},
+			error = {
+				bg = _G.color.base00,
+			},
+			error_visible = {
+				bg = _G.color.base00,
+			},
+			error_selected = {
+				bg = _G.color.base00,
+			},
+			error_diagnostic = {
+				bg = _G.color.base00,
+			},
+			error_diagnostic_visible = {
+				bg = _G.color.base00,
+			},
+			error_diagnostic_selected = {
+				bg = _G.color.base00,
+			},
 		},
 	})
 end
