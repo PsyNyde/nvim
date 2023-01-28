@@ -97,7 +97,6 @@ function M.config()
 
     -- WhichKey
     hl("WhichKeyFloat", _G.color.base00)
-    hl("WhichKeyBorder", _G.color.base01, _G.color.base01)
 
     -- Mason
     hl("MasonNormal", _G.color.base05, _G.color.base00) -- i can't change the mason prompt border :(
