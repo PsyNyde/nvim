@@ -1,9 +1,9 @@
 local M = {
     "nvim-tree/nvim-tree.lua",
     keys = {
-        { "<leader>n", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle nvim tree" } },
-        { "<C-M-n>", "<cmd>NvimTreeCollapse<cr>", { desc = "Focus tree" } },
-        { "<M-n>", "<cmd>NvimTreeFocus<cr>", { desc = "Focus tree" } },
+        { "<leader>n", "<cmd>NvimTreeToggle<cr>", desc = "Toggle nvim tree" },
+        { "<C-M-n>", "<cmd>NvimTreeCollapse<cr>", desc = "Focus tree" },
+        { "<M-n>", "<cmd>NvimTreeFocus<cr>", desc = "Focus tree" },
     },
 }
 
