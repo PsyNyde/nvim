@@ -1,6 +1,6 @@
 local M = {
 	"NvChad/nvim-colorizer.lua",
-    event = "BufReadPost",
+	event = "BufReadPost",
 	opts = {
 		filetypes = { "*" },
 		user_default_options = {

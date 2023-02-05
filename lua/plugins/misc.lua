@@ -11,4 +11,5 @@ return {
 			require("which-key").setup()
 		end,
 	},
+	{ "kylechui/nvim-surround", config = true, event = "BufReadPost" },
 }

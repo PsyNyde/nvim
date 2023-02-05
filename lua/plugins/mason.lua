@@ -1,6 +1,6 @@
 local M = {
 	"williamboman/mason.nvim",
-    cmd = {"Mason"},
+	cmd = { "Mason" },
 	opts = {
 		pip = {
 			upgrade_pip = true,
