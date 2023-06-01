@@ -1,4 +1,4 @@
-## Behold previews of the ~~blazingly~~ somewhat fast neovim config
+## Behold previews of the ~~blazingly~~ ~~somewhat~~ fast neovim config
 
 <img src="preview/1.png" alt="blazingly fast 🏎️" align="center">
 <hr>
