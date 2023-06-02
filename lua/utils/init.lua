@@ -60,6 +60,7 @@ M.lsp_servers = {
 	"jsonls",
 	"cssls",
 	"html",
+    'astro'
 }
 
 M.diagnostics_active = true

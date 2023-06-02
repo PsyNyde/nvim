@@ -12,4 +12,6 @@ return {
 		end,
 	},
 	{ "kylechui/nvim-surround", config = true, event = "BufReadPost" },
+    { "zbirenbaum/copilot.lua", event = "BufReadPost", config = true},
+    { "folke/todo-comments.nvim", event = "BufReadPost", config = true}
 }

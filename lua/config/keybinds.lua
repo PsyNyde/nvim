@@ -52,15 +52,15 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
 -- Lsp formatting
-vim.keymap.set("n", "<C-M-f>", function()
+vim.keymap.set("n", "<leader>fm", function()
 	vim.lsp.buf.format({ async = false })
 	vim.api.nvim_command("write")
 end, { desc = "Lsp formatting" })
 
 -- Open quickfix list
-vim.keymap.set("n", "<leader>d", function()
-	vim.diagnostic.setloclist()
-end, { desc = "Open quickfix list" })
+vim.keymap.set("n", "<leader>d", vim.diagnostic.goto_next, { desc = "next diagnostic" })
+
+vim.keymap.set("n", "<leader>dl","<cmd>Telescope diagnostics<cr>", { desc = "Open quickfix list" })
 
 -- toggle options
 vim.keymap.set("n", "<leader>tw", function()

@@ -7,6 +7,7 @@ local M = {
 		"hrsh7th/cmp-cmdline",
 		"hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip",
+        "zbirenbaum/copilot-cmp",
 	},
 	opts = function()
 		local cmp = require("cmp")
@@ -51,7 +52,7 @@ local M = {
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.close(),
 				["<CR>"] = cmp.mapping.confirm({
-					select = false,
+					select = true,
 				}),
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
@@ -78,7 +79,7 @@ local M = {
 				{ name = "nvim_lsp" },
 				{ name = "nvim_lsp_signature_help" },
 				{ name = "luasnip" },
-				-- { name = "copilot" },
+				{ name = "copilot" },
 				{ name = "path" },
 				{ name = "buffer" },
 			},
@@ -86,10 +87,10 @@ local M = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
 			},
-			-- experimental = { ghost_text = {
-			--     hl_group = "LspCodeLens",
-			-- } },
-		}
+			experimental = { ghost_text = {
+			    hl_group = "LspCodeLens",
+			} },
+	}
 	end,
 	config = function(_, opts)
 		local cmp = require("cmp")
@@ -112,3 +113,4 @@ local M = {
 }
 
 return M
+

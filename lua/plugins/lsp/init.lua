@@ -23,26 +23,18 @@ local M = {
 					capabilities = lsp_utils.capabilities,
 				})
 			end,
-
-			["pyright"] = function()
-				lspconfig.pyright.setup({
-					settings = {
-						python = {
-							analysis = {
-								typeCheckingMode = "off",
-							},
-						},
-					},
-				})
-			end,
-			["clangd"] = function()
-				local capabilities_cpp = lsp_utils.capabilities
-				capabilities_cpp.offsetEncoding = { "uts-16" }
-				lspconfig.clangd.setup({
-					on_attach = lsp_utils.on_attach,
-					capabilities = capabilities_cpp,
-				})
-			end,
+                -- these are for only ovveriding options
+			-- ["pyright"] = function()
+			-- 	lspconfig.pyright.setup({
+			-- 		settings = {
+			-- 			python = {
+			-- 				analysis = {
+			-- 					typeCheckingMode = "off",
+			-- 				},
+			-- 			},
+			-- 		},
+			-- 	})
+			-- end,
 		})
 	end,
 }
