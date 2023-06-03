@@ -87,9 +87,9 @@ local M = {
 				completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
 			},
-			experimental = { ghost_text = {
-			    hl_group = "LspCodeLens",
-			} },
+			-- experimental = { ghost_text = {
+			--     hl_group = "LspCodeLens",
+			-- } },
 	}
 	end,
 	config = function(_, opts)

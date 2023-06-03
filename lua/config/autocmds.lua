@@ -15,6 +15,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+-- delete all trailing whitespace on save
+vim.api.nvim_create_autocmd({"BufWritePre"}, {
+    pattern = "*",
+    command = [[%s/\s\+$//e]],
+})
 
 -- close some filetypes with <q>
 vim.api.nvim_create_autocmd("FileType", {

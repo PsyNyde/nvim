@@ -1,15 +1,19 @@
 local utils = require("utils")
 
+
+-- ctrl + c  for exiting insert mode
+vim.keymap.set("i", "<C-c>", "<esc>", { desc = "Exit insert mode" })
+
 -- Remap command key
 vim.keymap.set("n", "<leader><leader>", ":", { desc = "Command mode" })
 -- Essential
 vim.keymap.set({ "n", "v" }, "<leader>qq", "<cmd>quitall<cr>", { desc = "Quit" })
-vim.keymap.set({ "n", "i", "v" }, "<C-w>", "<cmd>bd<cr>", { desc = "Quit buffer" })
+vim.keymap.set({ "n", "i", "v" }, "<leader>x", "<cmd>bd<cr>", { desc = "Quit buffer" })
 vim.keymap.set({ "i", "v", "n" }, "<C-M-w>", "<cmd>bd!<cr><esc>", { desc = "Close buffer" })
 vim.keymap.set("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Open lazy" })
 vim.keymap.set("n", "<leader>uu", "<cmd>Lazy sync<cr>", { desc = "Sync plugins" })
 
--- Normal Map
+-- Normal Mapkey
 vim.keymap.set("n", "<TAB>", "<cmd>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-TAB>", ":bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "hs", ":split<CR>", { desc = "Horizonal split" })
@@ -74,3 +78,9 @@ vim.keymap.set("n", "<leader>tl", function()
 end, { desc = "Toggle Line Numbers" })
 vim.keymap.set("n", "<leader>td", utils.toggle_diagnostics, { desc = "Toggle Diagnostics" })
 vim.keymap.set("n", "<leader>tc", "<cmd>ColorizerToggle<cr>", { desc = "Toggle colorizer" })
+
+--copilot maps
+
+vim.api.nvim_set_keymap("i", "<C-L>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Previous()', { silent = true, expr = true })
+vim.api.nvim_set_keymap("i", "<C-K>", 'copilot#Next()', { silent = true, expr = true })
