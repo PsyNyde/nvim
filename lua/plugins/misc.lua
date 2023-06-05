@@ -2,6 +2,14 @@
 return {
     { "nvim-lua/plenary.nvim" },
     { "kylechui/nvim-surround", config = true, event = "BufReadPost" },
+    { "ggandor/leap.nvim", event = "BufReadPost",
+        dependencies = {
+		{ "tpope/vim-repeat" },
+        },
+        config = function()
+            require('leap').add_default_mappings()
+		end,
+    },
     {
         "github/copilot.vim",
         keys = {
@@ -18,4 +26,3 @@ return {
         }
     }
 }
-

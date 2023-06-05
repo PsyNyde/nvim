@@ -25,32 +25,8 @@ local modes = {
 	["R"] = " ",
 }
 
-local icons = {
-	["typescript"] = " ",
-	["python"] = " ",
-	["java"] = " ",
-	["html"] = " ",
-	["css"] = " ",
-	["scss"] = " ",
-	["javascript"] = " ",
-	["javascriptreact"] = " ",
-	["markdown"] = " ",
-	["sh"] = " ",
-	["zsh"] = " ",
-	["vim"] = " ",
-	["rust"] = " ",
-	["cpp"] = " ",
-	["c"] = " ",
-	["go"] = " ",
-	["lua"] = " ",
-	["conf"] = " ",
-	["haskel"] = " ",
-	["ruby"] = " ",
-	["txt"] = " ",
-}
-
 local function color()
-	local mode = vim.api.nvim_get_mode().mode
+	local mode = vim.api.nvim_get_mode().modesta
 	local mode_color = "%#StatusLine#"
 	if mode == "n" then
 		mode_color = "%#StatusNormal#"
@@ -73,25 +49,93 @@ local function branch()
 	local branch = cmd:read("*l") or cmd:read("*a")
 	cmd:close()
 	if branch ~= "" then
-		return string.format("   " .. branch)
+        return "  " .. branch
 	else
 		return ""
 	end
+end
+
+local function get_current_file_name()
+    local file = vim.fn.expand("%:t")
+    if vim.fn.empty(file) == 1 then
+        return ""
+    end
+    local icon = require("nvim-web-devicons").get_icon(
+        vim.fn.expand("%:e"),
+        vim.fn.expand("%:t"),
+        { default = true }
+    )
+    return icon .. " " .. file .. " "
+end
+
+-- git changes function
+local function git_changes()
+    local git_status = vim.b.gitsigns_status_dict
+    if git_status then
+        local added = git_status.added
+        local changed = git_status.changed
+        local removed = git_status.removed
+        local staged = git_status.staged
+        local unmerged = git_status.unmerged
+        local renamed = git_status.renamed
+        local deleted = git_status.deleted
+        local untracked = git_status.untracked
+        local ignored = git_status.ignored
+        local branch = git_status.head
+        local status = {}
+        if added and added > 0 then
+            table.insert(status, " " .. added)
+        end
+        if changed and changed > 0 then
+            table.insert(status, " " .. changed)
+        end
+        if removed and removed > 0 then
+            table.insert(status, " " .. removed)
+        end
+        if staged and staged > 0 then
+            table.insert(status, " " .. staged)
+        end
+        if unmerged and unmerged > 0 then
+            table.insert(status, " " .. unmerged)
+        end
+        if renamed and renamed > 0 then
+            table.insert(status, " " .. renamed)
+        end
+        if deleted and deleted > 0 then
+            table.insert(status, " " .. deleted)
+        end
+        if untracked and untracked > 0 then
+            table.insert(status, " " .. untracked)
+        end
+        if ignored and ignored > 0 then
+            table.insert(status, " " .. ignored)
+        end
+        if #status > 0 then
+            return " " .. table.concat(status, " ")
+        end
+    end
+    return ""
+end
+
+-- file encoding function
+local function file_encoding()
+    local encoding = vim.bo.fenc ~= "" and vim.bo.fenc or vim.o.enc
+    return " " .. encoding .. " "
 end
 
 -- StatusLine Modes
 Status = function()
 	return table.concat({
 		color(), -- mode colors
-		string.format("  %s ", modes[vim.api.nvim_get_mode().mode]):upper(), -- mode
+		string.format(" %s", modes[vim.api.nvim_get_mode().mode]):upper(), -- mode
 		"%#StatusActive#", -- middle color
 		branch(),
-		-- " %f ", -- file name
+        git_changes(),
 		"%=", -- right align
-		string.format("%s", (icons[vim.bo.filetype] or "")),
-		" %f ",
+        file_encoding(),
+        get_current_file_name(),
 		color(), -- mode colors
-		" %l:%c  ", -- line, column
+		"%l:%c ", -- line, column
 	})
 end
 
