@@ -9,6 +9,8 @@ local M = {
 	keys = {
 
 		{ "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>", desc = "Find files" },
+		{ "<leader>fa", "<cmd>Telescope find_files hidden=true<cr>", desc = "Find files" },
+		{ "<leader>fr", "<cmd>lua require('telescope.builtin').oldfiles()<cr>", desc = "Find files" },
 		{ "<C-p>", "<cmd>lua require('telescope.builtin').commands()<cr>" },
 		{
 			"<C-M-p>",
@@ -42,6 +44,10 @@ local M = {
 					"%.otf",
 					"%.ttf",
 					"node_modules",
+                    "dist",
+                    "build",
+                    "pnpm-lock.yaml",
+                    "yarn.lock",
 				},
 				prompt_prefix = "   ",
 				selection_caret = "  ",
