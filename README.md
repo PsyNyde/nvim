@@ -1,3 +1,9 @@
+# NOTE: This project is no longer maintained. The repository has been moved to [https://codeberg.org/linad/nvim](codeberg.com/linad/nvim)
+
+## And no anime girl anymore sorry :'D
+
+<br>
+
 ## Behold previews of the ~~blazingly~~ ~~somewhat~~ fast neovim config
 
 <img src="preview/1.png" alt="blazingly fast 🏎️" align="center">
